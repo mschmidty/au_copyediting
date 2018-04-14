@@ -1,0 +1,13 @@
+.blog-section{
+  padding:50px;
+  .tag-id{
+    left:-20px;
+    top:-5px;
+  }
+  .blog-item{
+    position:relative;
+    background:$white;
+    padding:20px;
+    margin:20px;
+  }
+}

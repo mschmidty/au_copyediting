@@ -1,0 +1,19 @@
+.home-background-image {
+  position:relative;
+  img{
+    width:100%;
+    display:block;
+  }
+  .hire-me{
+    position:absolute;
+    top:0;
+    height:100%;
+    width:40%;
+    color:$white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-left:10%;
+  }
+}

@@ -1,0 +1,22 @@
+.testemonials {
+  div.list-item{
+    border-bottom:5px solid $off-white;
+    padding:20px;
+    align-items:center;
+    transition:0.3s all ease;
+    position:relative;
+    &:hover{
+      background:$dark-blue;
+      color:$white;
+    }
+    img {
+      width:40%;
+      height:auto;
+      padding:7%;
+      display:inline-block;
+    }
+    p {
+      padding:0 2rem;
+    }
+  }
+}
