@@ -4,3 +4,4 @@ images
 node_modules
 .DS_Store
 .jscsrc
+package-lock.json
