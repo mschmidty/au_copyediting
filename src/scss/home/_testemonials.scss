@@ -1,22 +1,64 @@
 .testemonials {
-  div.list-item{
-    border-bottom:5px solid $off-white;
-    padding:20px;
+  background:$off-white;
+  a.list-item{
+    position:relative;
+    margin-top:-100px;
+    padding:70px 10px 10px 10px;
     align-items:center;
     transition:0.3s all ease;
     position:relative;
+    background:$white;
+    border-top:15px solid $dark-blue;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-radius:5px;
     &:hover{
       background:$dark-blue;
-      color:$white;
+      color:$off-white;
+      .section-header{
+        color:$off-white;
+      }
     }
     img {
-      width:40%;
+      max-width:60%;
       height:auto;
       padding:7%;
-      display:inline-block;
+      display:block;
+      margin:0 auto;
     }
     p {
-      padding:0 2rem;
+      padding:0 1rem;
     }
   }
+
+  .testemonial-wrap{
+    @media all and(max-width:950px){
+      position:relative;
+      display:block;
+      margin-top:-75px;
+      overflow:hidden;
+      padding:0;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      border-bottom:10px solid $dark-blue;
+
+      .grid-item{
+        margin:0;
+      }
+      a.list-item{
+        display:flex;
+        flex-direction:column-reverse;
+        align-items:center;
+        margin-top:0;
+        border-radius:0;
+        border-bottom:2px solid $dark-blue;
+        img{
+          width:40%;
+          height:auto;
+        }
+        &:last-of-type{
+          border-bottom:none;
+        }
+      }
+    }
+  }
+
 }

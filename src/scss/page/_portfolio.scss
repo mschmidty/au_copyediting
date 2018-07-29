@@ -1,0 +1,23 @@
+.portfolio-list {
+  list-style-type:none;
+  padding-left:0;
+}
+.portfolio-list-item{
+  padding:70px 0;
+  width:90%;
+  display:flex;
+  margin:0 auto;
+  .list-item-text{
+    margin:3px 0 0 40px;
+    border-top:6px solid $dark-blue;
+    max-width:800px;
+  }
+  .overflow-hidden {
+    overflow:hidden;
+    box-shadow:2px 2px 4px rgba(0,0,0,0.5);
+    border-radius:5px;
+  }
+}
+.portfolio-list-item>div{
+  flex-basis:50%;
+}

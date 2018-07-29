@@ -1,0 +1,12 @@
+.services-list{
+  list-style-type:none;
+  padding:40px 50px;
+  li{
+    border-top:5px solid $dark-blue;
+    margin-bottom:50px;
+    padding:20px 15px 10px 15px;
+    h2{
+      //text-align:center;
+    }
+  }
+}

@@ -1,13 +1,28 @@
+
 .blog-section{
-  padding:50px;
+  display:flex;
+  flex-wrap:wrap;
   .tag-id{
     left:-20px;
     top:-5px;
   }
-  .blog-item{
+  a.blog-item{
     position:relative;
     background:$white;
     padding:20px;
-    margin:20px;
+    margin:20px 0;
+    border-radius:5px;
+    box-shadow:2px 2px 4px rgba(0,0,0,0.5);
+    width:calc(50% - 20px);
+    margin-right:40px;
+    &:nth-of-type(2n){
+      margin-right:0;
+    }
+  }
+  @include bp(medium){
+    a.blog-item{
+      width:100%;
+      margin-right:0;
+    }
   }
 }

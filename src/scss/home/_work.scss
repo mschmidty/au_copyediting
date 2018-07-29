@@ -1,14 +1,28 @@
 .work-section{
-  padding:50px;
+  position:relative;
   .tag-id{
     left:-20px;
     top:-5px;
   }
   >a{
     text-decoration:none;
-    color:$white;
-  }
+    color:$black;
+    display:block;
+    height:700px;
+    width:100%;
+    position:relative;
 
+  }
+  .overflow-hidden{
+    overflow:hidden;
+    height:700px;
+    width:100%;
+    position:relative;
+    z-index:1;
+    border:10px solid $white;
+    border-radius:5px;
+    box-shadow:2px 2px 4px rgba(0,0,0,0.5);
+  }
   .list-item{
     position:relative;
     display:block;
@@ -20,15 +34,38 @@
     }
   }
   .list-item-text {
-    background:rgba(34,34,34,0.8);
+    background:rgba(255,255,255,0.8);
     width:400px;
     padding:20px;
     position:absolute;
     z-index:100;
     top:20px;
     right:20px;
-    h2 {
-      color:$off-white;
+    @include bp(small){
+      width:calc(100% - 20px);
+      margin:0 auto;
+      bottom:10px;
+      right:unset;
+      left:10px;
+      top:unset;
+      background:rgba(20,20,20,0.8);
+      color:$white;
+
+      .section-header{
+        color:$white;
+      }
     }
+  }
+
+}
+.background-image{
+  height:700px;
+  width:100%;
+  transition:0.5s ease all;
+}
+.background-image-scale{
+  &:hover, &:focus{
+    transform:scale(1.1);
+    filter: grayscale(0.5) brightness(35%);
   }
 }

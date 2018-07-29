@@ -1,4 +1,9 @@
-
+.home-section{
+  padding:50px 7%;
+  @include bp(small){
+    padding:30px;
+  }
+}
 @import 'banner';
 @import 'testemonials';
 @import 'work';

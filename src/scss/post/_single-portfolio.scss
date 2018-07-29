@@ -1,0 +1,24 @@
+.single-portfolio{
+  background:$dark-blue;
+  color:$white;
+  .entry-header{
+    background:$dark-blue;
+  }
+  .entry-content{
+    border-top:10px solid $light-orange;
+    color:$black;
+  }
+  .tag-id{
+    background:$light-orange;
+    color:$black;
+  }
+  .portfolio-list-item .list-item-text{
+    border-top:10px solid $light-orange;
+  }
+}
+.entry-content.card{
+  max-width:800px;
+  width:95%;
+  margin:0 auto;
+  padding:40px;
+}

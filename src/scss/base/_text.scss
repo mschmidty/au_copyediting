@@ -1,16 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700');
+@font-face {
+    font-family: 'bebas_neuebold';
+    src: url('fonts/bebas-neue/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('fonts/bebas-neue/bebasneue_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'bebas_neue_regularregular';
+    src: url('fonts/bebas-neue/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('fonts/bebas-neue/bebasneue_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'bebas_neuebook';
+    src: url('fonts/bebas-neue/bebasneue_book-webfont.woff2') format('woff2'),
+         url('fonts/bebas-neue/bebasneue_book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 body, p{
-  font-family:"Nunito Sans", Helvetica, sans-serif;
-  font-weight:300;
+  font-family:"Fira Sans", Helvetica, sans-serif;
+  font-weight:400;
   font-size:18px;
   font-style:normal;
-  line-height:26px;
+  line-height:28px;
 }
 
-$h-font:"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-
+//$h-font:"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+$h-font:"Fira Sans";
 .typewriter-font {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	font-size: 24px;
@@ -19,7 +43,21 @@ $h-font:"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", m
 	font-weight: 500;
 	line-height: 27.4px;
 }
-
-p {
-
+p,h1,h2,h3,h4,span{
+  a {
+    color:$black;
+    border-bottom:2px solid $light-blue;
+    font-size:1.2rem;
+    text-decoration:none;
+    transition:0.3s ease all;
+    &:hover {
+      background:$dark-blue;
+      color:$white;
+      border-radius:2px;
+    }
+  }
+}
+a{
+  color:$black;
+  text-decoration:none;
 }

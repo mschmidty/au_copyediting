@@ -32,8 +32,6 @@
 		  </a>
 			<div class="menu-nav-container">
 				<div class="mobile-nav-header-container">
-
-		      <h2 class="mobile-nav-header">Navigation</h2>
 					<a href="#" class="close-toggle">
 						<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
 								<use xlink:href="#close"></use>
@@ -47,11 +45,39 @@
 						'menu_id'        => 'primary-menu',
 					) );
 				?>
+				<div class="header-social-icons">
+					<ul>
+						<li>
+							<a href="#">
+								<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+										<use xlink:href="#facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+										<use xlink:href="#twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+										<use xlink:href="#instagram"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div><!-- .menu-nav-container -->
 		</nav><!-- #site-navigation -->
 		<div class="logo-header">
-			<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" class="logo-header-large">
 					<use xlink:href="#auLogo"></use>
+			</svg>
+			<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" class="logo-header-small">
+					<use xlink:href="#auLogoSmall"></use>
 			</svg>
 		</div><!-- .site-branding -->
 		<div class="header-social-icons">

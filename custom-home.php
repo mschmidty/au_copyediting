@@ -10,78 +10,78 @@
     <div class="banner home-background-image">
       <img src="<?php echo get_template_directory_uri() . '/images/typewriter.jpg'; ?>" alt="">
       <div class="hire-me">
-        <p class="typewriter-font">You could say some stuff up here! You could say a lot up here! And it would look sick on a wood background!</p>
+        <p >You could say some stuff up here! You could say a lot up here! And it would look sick on a wood background!</p>
         <button type="button" name="button" class="button">Hire Me!</button>
       </div>
     </div>
 
+    <div class="home-section testemonials ">
+      <div class="testemonial-wrap grid lrg-3">
 
 
-    <div class="alternating-list testemonials">
-      <div class="list-item">
-        <span class="tag-id">Testemonial</span>
-        <img src="https://create.adobe.com/content/microsites/inspire/en/2017/8/21/what_s_a_picture_worth_images_text_and_logos/_jcr_content/article-body/full_width_images_6/image1.img.jpg/1503332582153.jpg" alt="">
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi explicabo aut? Harum recusandae, dolorem facilis nam, quibusdam ut maxime facere voluptatum dignissimos vel modi iste nemo in cupiditate debitis?</p>
-          <p class="section-header">Lindsey Beal<br><span>Product Marketer</span></p>
-        </div>
-      </div>
-      <div class="list-item">
-        <span class="tag-id">Testemonial</span>
-        <img src="https://create.adobe.com/content/microsites/inspire/en/2017/8/21/what_s_a_picture_worth_images_text_and_logos/_jcr_content/article-body/full_width_images_6/image1.img.jpg/1503332582153.jpg" alt="">
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi explicabo aut? Harum recusandae, dolorem facilis nam, quibusdam ut maxime facere voluptatum dignissimos vel modi iste nemo in cupiditate debitis?</p>
-          <p class="section-header">Lindsey Beal<br><span>Product Marketer</span></p>
-        </div>
-      </div>
-      <div class="list-item">
-        <span class="tag-id">Testemonial</span>
-        <img src="https://create.adobe.com/content/microsites/inspire/en/2017/8/21/what_s_a_picture_worth_images_text_and_logos/_jcr_content/article-body/full_width_images_6/image1.img.jpg/1503332582153.jpg" alt="">
-        <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi explicabo aut? Harum recusandae, dolorem facilis nam, quibusdam ut maxime facere voluptatum dignissimos vel modi iste nemo in cupiditate debitis?</p>
-          <p class="section-header">Lindsey Beal<br><span>Product Marketer</span></p>
-        </div>
+        <?php
+        $args = array( 'post_type' => 'testimonial', 'posts_per_page' => 3 );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post();
+        ?>
+
+        <a href="/index.php?page_id=54" class="list-item grid-item">
+          <span class="tag-id">Testimonial</span>
+          <div>
+            <p>"<?php the_field('testimonial_excerpt'); ?>"</p>
+            <p class="section-header">-<?php the_field('testimonial_provider'); ?><br><span><?php the_field("testimonial_provider_title"); ?> <br> <?php the_field('testimonial_organization'); ?></span></p>
+          </div>
+          <?php
+          $image = get_field('testimonial_image');
+          if( !empty($image) ): ?>
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+          <?php endif; ?>
+        </a>
+
+
+        <?php endwhile; wp_reset_query(); ?>
       </div>
     </div>
 
 
-    <section class="work-section background2">
-      <a href="#" class="list-item">
+    <section class="work-section home-section background2">
+      <?php
+      $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 2 );
+      $loop = new WP_Query( $args );
+      while ( $loop->have_posts() ) : $loop->the_post();
+      ?>
+
+      <a href="<?php the_permalink(); ?>" class="list-item">
         <span class="tag-id">Work</span>
-        <img src="https://www.slovenia.info/uploads/narava/Mountains-and-hills-julian-alps.jpg" alt="">
+        <div class="overflow-hidden">
+          <div class="background-image background-image-scale" style="background:url(<?php the_field('portfolio_image'); ?>)no-repeat bottom center; background-size:cover;">
+
+
+          </div>
+        </div>
+
         <div class="list-item-text">
-          <h2 class="section-header">Osprey<br> <span>Fall Catalog</span> </h2>
-          <p>didunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="section-header"><?php the_field('portfolio_organization'); ?><br> <span><?php the_field('portfolio_what'); ?></span> </p>
+          <p><?php the_field('portfolio_description'); ?></p>
 
         </div>
       </a>
-      <a href="#" class="list-item">
-        <span class="tag-id">Work</span>
-        <img src="https://www.slovenia.info/uploads/narava/Mountains-and-hills-julian-alps.jpg" alt="">
-        <div class="list-item-text">
-          <h2 class="section-header">Osprey<br> <span>Fall Catalog</span> </h2>
-          <p> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        </div>
-      </a>
+      <?php endwhile; wp_reset_query(); ?>
+
     </section>
 
 
-    <section class="services-section background1">
+    <section class="services-section home-section background1">
       <span class="tag-id">Services</span>
       <ul>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
-        <li><a href="#">Spelling</a> </li>
+        <?php
+        $args = array( 'post_type' => 'services', 'posts_per_page' => -1 );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post();
+        ?>
+        <li> <a href="/index.php/services"><?php the_title(); ?></a></li>
+        <?php endwhile; wp_reset_query(); ?>
         <li></li>
         <li></li>
         <li></li>
@@ -90,38 +90,27 @@
     </section>
 
 
-    <section class="blog-section background2">
-      <div class="blog-item">
-        <span class="tag-id">Blog</span>
-        <h2 class="section-header">Smart Design <br> <span>by Aaron</span> </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="blog-item">
-        <span class="tag-id">Blog</span>
-        <h2 class="section-header">Smart Design <br> <span>by Aaron</span> </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="blog-item">
-        <span class="tag-id">Blog</span>
-        <h2 class="section-header">Smart Design <br> <span>by Aaron</span> </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="blog-item">
-        <span class="tag-id">Blog</span>
-        <h2 class="section-header">Smart Design <br> <span>by Aaron</span> </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="blog-item">
-        <span class="tag-id">Blog</span>
-        <h2 class="section-header">Smart Design <br> <span>by Aaron</span> </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="blog-item">
-        <span class="tag-id">Blog</span>
-        <h2 class="section-header">Smart Design <br> <span>by Aaron</span> </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
+    <section class="blog-section home-section background2">
+      <?php
+      $args = array('posts_per_page' => 5 );
+      // The Query
+      query_posts( $args );
 
+      // The Loop
+      while ( have_posts() ) : the_post();
+       ?>
+      <a href=" <?php the_permalink(); ?>" class="blog-item">
+        <span class="tag-id">Blog</span>
+        <h2 class="section-header"><?php the_title(); ?> <br> <span><?php the_author(); ?></span> </h2>
+        <?php the_excerpt(); ?>
+      </a>
+
+      <?php
+      endwhile;
+
+      // Reset Query
+      wp_reset_query();
+       ?>
     </section>
 
   </main><!-- #main -->
