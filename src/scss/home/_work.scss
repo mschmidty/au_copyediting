@@ -8,14 +8,14 @@
     text-decoration:none;
     color:$black;
     display:block;
-    height:700px;
+    height:800px;
     width:100%;
     position:relative;
 
   }
   .overflow-hidden{
     overflow:hidden;
-    height:700px;
+    height:800px;
     width:100%;
     position:relative;
     z-index:1;
@@ -51,15 +51,15 @@
       background:rgba(20,20,20,0.8);
       color:$white;
 
-      .section-header{
-        color:$white;
-      }
+
     }
   }
-
+  .section-header{
+    text-align:center;
+  }
 }
 .background-image{
-  height:700px;
+  height:800px;
   width:100%;
   transition:0.5s ease all;
 }

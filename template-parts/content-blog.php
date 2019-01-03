@@ -1,4 +1,4 @@
-<ul class="deep-shadow-list grid">
+<ul class="blog-section">
   <?php
   $args = array('posts_per_page' => 5 );
   // The Query
@@ -6,7 +6,7 @@
   // The Loop
   while ( have_posts() ) : the_post();
    ?>
-   <li>
+   <li class="blog-item">
       <a href=" <?php the_permalink(); ?>" >
 
         <h2 class="section-header"><?php the_title(); ?> <br> <span><?php the_author(); ?></span> </h2>

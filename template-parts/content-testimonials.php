@@ -6,7 +6,7 @@ $args = array(
 $testimonials = new WP_Query( $args );
 if( $testimonials->have_posts() ) :
 ?>
-<ul class="deep-shadow-list grid lrg-3">
+<ul class="deep-shadow-list">
   <?php
 
   while( $testimonials->have_posts() ) :

@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <div class="home-section testemonials ">
+    <div class="home-section testimonials ">
       <div class="testemonial-wrap grid lrg-3">
 
 
@@ -73,24 +73,28 @@
 
 
     <section class="services-section home-section background1">
-      <span class="tag-id">Services</span>
-      <ul>
+
+      <div class="services-home">
+
+        <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		        <use xlink:href="#scroll"></use>
+		    </svg>
+        <p>
         <?php
-        $args = array( 'post_type' => 'services', 'posts_per_page' => -1 );
-        $loop = new WP_Query( $args );
-        while ( $loop->have_posts() ) : $loop->the_post();
-        ?>
-        <li> <a href="/index.php/services"><?php the_title(); ?></a></li>
-        <?php endwhile; wp_reset_query(); ?>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+          $post_id = 58;
+          $queried_post = get_post($post_id);
+          echo $queried_post->post_content;
+         ?>
+         </p>
+      </div>
+
     </section>
 
 
     <section class="blog-section home-section background2">
+      <header class="entry-header">
+        <h1 class="entry-title">Blog</h1>
+      </header>
       <?php
       $args = array('posts_per_page' => 5 );
       // The Query
@@ -99,11 +103,12 @@
       // The Loop
       while ( have_posts() ) : the_post();
        ?>
-      <a href=" <?php the_permalink(); ?>" class="blog-item">
-        <span class="tag-id">Blog</span>
+       <li class="blog-item">
+      <a href=" <?php the_permalink(); ?>">
         <h2 class="section-header"><?php the_title(); ?> <br> <span><?php the_author(); ?></span> </h2>
         <?php the_excerpt(); ?>
       </a>
+      </li>
 
       <?php
       endwhile;

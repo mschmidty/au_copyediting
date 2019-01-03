@@ -1,7 +1,11 @@
 .home-section{
-  padding:50px 7%;
+  padding:75px 0;
+  max-width:85%;
+  width:1300px;
+  margin:0 auto;
+  border-bottom:2px solid $dark-grey;
   @include bp(small){
-    padding:30px;
+    max-width:95%;
   }
 }
 @import 'banner';

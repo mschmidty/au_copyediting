@@ -3,10 +3,10 @@
   position:relative;
 }
 .entry-header{
-  padding:20px 0 60px 0;
+  padding:80px 0 60px 0;
   color:$black;
 }
-.entry-meta, .post-navigation, .entry-footer{
+.entry-header, .entry-meta, .post-navigation, .entry-footer{
   max-width:800px;
   width:95%;
   margin:0 auto;
@@ -22,7 +22,7 @@
 .entry-content {
   position:relative;
   max-width:100%;
-  p,h1,h2,h3,h4,h5,h6,>ul,>ol,a,span {
+  p,h1,h2,h3,h4,h5,h6,>ul,>ol,a,span, form {
     max-width:800px;
     width:92%;
     margin:0 auto;

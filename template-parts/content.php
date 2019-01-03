@@ -21,8 +21,11 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
+				<time class="entry-date published updated">
+					<?php the_date();?>
+				</time>
+				|
 				<?php
-				au_copyediting_posted_on();
 				au_copyediting_posted_by();
 				?>
 			</div><!-- .entry-meta -->

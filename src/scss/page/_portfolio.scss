@@ -2,11 +2,14 @@
   list-style-type:none;
   padding-left:0;
 }
-.portfolio-list-item{
+a.portfolio-list-item{
   padding:70px 0;
   width:90%;
   display:flex;
   margin:0 auto;
+  &:first-of-type{
+    padding-top:0;
+  }
   .list-item-text{
     margin:3px 0 0 40px;
     border-top:6px solid $dark-blue;

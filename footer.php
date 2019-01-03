@@ -30,8 +30,7 @@
 			<div class="footer-contact">
 				<h3>Contact</h3>
 				<ul>
-					<li>Email: <span>aaron@aucopyedior.com</span></li>
-					<li>Phone: <span>970-###-####</span></li>
+					<li>Email: <span>aaron@aucopyeditor.com</span></li>
 				</ul>
 
 

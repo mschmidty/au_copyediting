@@ -1,5 +1,5 @@
-.testemonials {
-  background:$off-white;
+.testimonials {
+  background:$white;
   a.list-item{
     position:relative;
     margin-top:-100px;
@@ -9,8 +9,8 @@
     position:relative;
     background:$white;
     border-top:15px solid $dark-blue;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    border-radius:5px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    border-radius:2px;
     &:hover{
       background:$dark-blue;
       color:$off-white;
@@ -18,10 +18,9 @@
         color:$off-white;
       }
     }
+    
     img {
-      max-width:60%;
-      height:auto;
-      padding:7%;
+      max-width:50%;
       display:block;
       margin:0 auto;
     }

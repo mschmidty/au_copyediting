@@ -1,10 +1,7 @@
-header {
+.site-header {
   width:100%;
   background:$white;
   position:relative;
-
-}
-.site-header {
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -25,6 +22,7 @@ header {
     border:none;
     &:hover{
       background:none;
+      color:$light-blue;
     }
   }
   >.header-social-icons{
@@ -177,7 +175,7 @@ a.close-toggle {
       color:$black;
       font-size:2.5em;
       &:hover {
-        color:$white;
+        color:$light-blue;
       }
       @include bp(small){
         font-size:1.6rem;
