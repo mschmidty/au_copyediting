@@ -26,7 +26,7 @@
     }
   }
   >.header-social-icons{
-    @include bp(small){
+    @include bp(medium){
       ul{
         display:none;
       }
@@ -47,7 +47,7 @@ header {
   margin:0;
   align-self:center;
   transition:1s all ease;
-  svg{
+  img{
     height:300px;
     width:auto;
     transition:1s all ease;
@@ -61,7 +61,7 @@ header {
     color:black;
   }
   @include bp(small){
-    svg{
+    img{
       height:150px;
     }
   }
@@ -140,6 +140,9 @@ a.close-toggle {
   width:55px;
   border-radius:50%;
   box-shadow:2px 2px 4px rgba(0,0,0,0.7);
+  &:hover{
+    background:$light-blue;
+  }
   svg{
     display: inline-block;
     fill:$white;
@@ -205,7 +208,7 @@ a.close-toggle {
 .small-header{
   padding:5px;
   .logo-header{
-    svg{
+    img{
       height:85px;
     }
   }

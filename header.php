@@ -48,21 +48,28 @@
 				<div class="header-social-icons">
 					<ul>
 						<li>
-							<a href="#">
+							<a href="https://www.facebook.com/Au-Copyediting-Copywriting-995339710662121/?modal=admin_todo_tour">
 								<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
 										<use xlink:href="#facebook"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://twitter.com/aucopyeditor">
 								<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
 										<use xlink:href="#twitter"></use>
 								</svg>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://www.linkedin.com/in/aaron-unterreiner-b404936/">
+								<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+										<use xlink:href="#linkedin-logo"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/au_copyediting_copywriting/">
 								<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
 										<use xlink:href="#instagram"></use>
 								</svg>
@@ -73,36 +80,40 @@
 			</div><!-- .menu-nav-container -->
 		</nav><!-- #site-navigation -->
 		<div class="logo-header">
-			<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" class="logo-header-large">
-					<use xlink:href="#auLogo"></use>
-			</svg>
-			<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" class="logo-header-small">
-					<use xlink:href="#auLogoSmall"></use>
-			</svg>
+			<img src="<?php echo get_template_directory_uri() . '/images/aulogo3.svg'; ?>" alt="">
+
 		</div><!-- .site-branding -->
 		<div class="header-social-icons">
 			<ul>
 				<li>
-					<a href="#">
+					<a href="https://www.facebook.com/Au-Copyediting-Copywriting-995339710662121/?modal=admin_todo_tour">
 						<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
 								<use xlink:href="#facebook"></use>
 						</svg>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="https://twitter.com/aucopyeditor">
 						<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
 								<use xlink:href="#twitter"></use>
 						</svg>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="https://www.linkedin.com/in/aaron-unterreiner-b404936/">
+						<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+								<use xlink:href="#linkedin-logo"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/au_copyediting_copywriting/">
 						<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
 								<use xlink:href="#instagram"></use>
 						</svg>
 					</a>
 				</li>
+
 			</ul>
 		</div>
 	</header><!-- #masthead -->

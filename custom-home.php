@@ -10,8 +10,10 @@
     <div class="banner home-background-image">
       <img src="<?php echo get_template_directory_uri() . '/images/typewriter.jpg'; ?>" alt="">
       <div class="hire-me">
-        <p >You could say some stuff up here! You could say a lot up here! And it would look sick on a wood background!</p>
-        <button type="button" name="button" class="button">Hire Me!</button>
+        <p class="banner-tagline">Everybody Needs a Copyeditor<span id="punctuation-js-hook">.</span></p>
+        <span>
+          <a href="/contact/" class="home-banner-link decorated-link">Hire Me</a>
+        </span>
       </div>
     </div>
 

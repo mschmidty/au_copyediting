@@ -3,6 +3,9 @@
   flex-wrap:wrap;
   padding-left:0;
   margin-top:0;
+  max-width:95%;
+  width:700px;
+  margin:0 auto;
   .tag-id{
     left:-20px;
     top:-5px;
@@ -12,10 +15,7 @@
     padding:0;
   }
   li.blog-item{
-    max-width:95%;
-    width:700px;
 
-    margin:0 auto;
     border-bottom:2px solid $light-grey;
     list-style-type:none;
     position:relative;

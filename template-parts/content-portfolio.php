@@ -12,7 +12,7 @@ if( $portfolio->have_posts() ) :
   while( $portfolio->have_posts() ) :
         $portfolio->the_post(); ?>
         <li>
-          <a href="<?php the_permalink(); ?>" class="portfolio-list-item">
+          <div class="portfolio-list-item">
 
             <div class="overflow-hidden">
               <div class="background-image background-image-scale" style="background:url(<?php the_field('portfolio_image'); ?>)no-repeat bottom center; background-size:cover;">
@@ -24,7 +24,7 @@ if( $portfolio->have_posts() ) :
               <p><?php the_field('portfolio_description'); ?></p>
 
             </div>
-          </a>
+          </div>
         </li>
   <?php
   endwhile;

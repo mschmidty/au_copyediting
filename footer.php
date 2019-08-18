@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
-				<use xlink:href="#auLogoSmall2"></use>
+				<use xlink:href="#aulogosmall2"></use>
 		</svg>
 		<div class="footer-info">
 			<div class="footer-navigation">
@@ -37,19 +37,8 @@
 			</div>
 		</div>
 		<div class="site-info">
-			<p>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'au_copyediting' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'au_copyediting' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'au_copyediting' ), 'au_copyediting', '<a href="http://schmidtyworks.com">Michael Schmidt</a>' );
-				?>
-			</p>
+			<p>Theme developed by
+			<a href="http://schmidtyworks.com">Schmidtyworks</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

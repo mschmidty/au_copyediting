@@ -38,7 +38,7 @@ body{
 
 
 p,h1,h2,h3,h4,span{
-  a {
+  a, .decorated-link {
     color:$black;
     border-bottom:2px solid $light-blue;
     font-size:1.2rem;
@@ -49,6 +49,19 @@ p,h1,h2,h3,h4,span{
       color:$white;
       border-radius:2px;
     }
+  }
+}
+.decorated-link {
+  color:$black;
+  border-bottom:2px solid $light-blue;
+  font-size:1.2rem;
+  text-decoration:none;
+  transition:0.3s ease all;
+  display:block;
+  &:hover {
+    background:$dark-blue;
+    color:$white;
+    border-radius:2px;
   }
 }
 a{
