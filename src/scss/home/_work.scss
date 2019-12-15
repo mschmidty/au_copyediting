@@ -33,6 +33,9 @@
       z-index:1;
     }
   }
+  .section-header{
+    color: $white;
+  }
   .list-item-text {
     background:rgba(255,255,255,0.8);
     width:400px;
@@ -53,9 +56,6 @@
 
 
     }
-  }
-  .section-header{
-    text-align:center;
   }
 }
 .background-image{

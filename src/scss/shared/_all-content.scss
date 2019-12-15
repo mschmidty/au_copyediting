@@ -12,12 +12,13 @@ a {
   font-weight:700;
   color:$black;
   font-weight:bold;
-  font-size:1.1rem;
+  font-size:1.5rem;
   line-height:1.5rem;
-  text-align:center;
+  text-align:left;
   span{
     color:$light-grey;
     font-weight:500;
+    font-size: 1.1rem;
   }
 }
 //Style for Button
